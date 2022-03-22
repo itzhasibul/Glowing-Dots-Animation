@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #001300;
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    animation: color 5s linear infinite;
+}
+
+@keyframes color {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+span {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    display: block;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #00ff0a;
+    transform: scale(0.4);
+    box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a, 0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 2s;
+}
+
+span:hover::before {
+    transform: scale(0.9);
+    transition: 0s;
+}
