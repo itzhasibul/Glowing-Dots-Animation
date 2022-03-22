@@ -27,8 +27,8 @@ section {
 
 span {
     position: relative;
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     display: block;
 }
 
@@ -48,6 +48,6 @@ span::before {
 }
 
 span:hover::before {
-    transform: scale(1);
+    transform: scale(0.9);
     transition: 0s;
 }
